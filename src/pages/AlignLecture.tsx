@@ -10,7 +10,7 @@ const columns: GridColDef[] = [
 ];
 
 const AlignLecture = () => {
-  const [rows, setRows] = useState([]);
+  const [rows] = useState([]);
   useEffect(()=>{
     axios.get('http://localhost:8080/api/v1/course/userLectures').then((res)=>{
         console.log(res)

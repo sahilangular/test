@@ -1,20 +1,7 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 import CourseItem from "./CourseItem";
-import Input from "./Input";
 import Model from "./Model";
-import axios from "axios";
-
-const coursedata = [
-  {
-    id: "1",
-    name: "data",
-    image:
-      "https://images.pexels.com/photos/257309/pexels-photo-257309.jpeg?auto=compress&cs=tinysrgb&dpr",
-    description: "This is a data science course",
-    level: "higher",
-    lecture: [],
-  },
-];
 
 const CourseList = () => {
   const [course, setCourse] = useState([]);

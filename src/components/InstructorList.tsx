@@ -6,7 +6,6 @@ export default function DataTable() {
 
   useEffect(() => {
     axios.get("http://localhost:8080/api/v1/user/all").then((res) => {
-      console.log(res);
       setRows(res.data.users);
     });
   }, []);
@@ -28,7 +27,7 @@ export default function DataTable() {
             </tr>
           </thead>
           <tbody>
-            {rows.map((item:any,i:any)=>(
+            {rows.map((item:any)=>(
               <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
               <th
                 scope="row"
